@@ -1,19 +1,19 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { NavigationContainer } from '@react-navigation/native'
-import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs'
+import { createDrawerNavigator } from '@react-navigation/drawer';
 import Home from './assets/screens/Home'
 import Details from './assets/screens/Details'
 
-const Tab = createMaterialTopTabNavigator()
+const Drawer = createDrawerNavigator()
 
 export default function App() {
   return (
     <NavigationContainer>
-      <Tab.Navigator initialRouteName='Home'>
-        <Tab.Screen name="Home" component={Home}/>
-        <Tab.Screen name='Details' component={Details}/>
-      </Tab.Navigator>
+      <Drawer.Navigator initialRouteName='Home'>
+        <Drawer.Screen name="Home" component={Home}/>
+        <Drawer.Screen name='Details' component={Details}/>
+      </Drawer.Navigator>
     </NavigationContainer>
   )
 }
